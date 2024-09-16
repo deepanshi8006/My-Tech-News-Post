@@ -11,7 +11,7 @@ const Stories = () => {
   }
   return (
 
-    <div className="container " style={{ maxWidth: "50vw" }} >
+    <div className="container " style={{ maxWidth: "80vw" }} >
       {hits.map((currPost) => {
         const { title, author, objectID, url, num_comments } = currPost
         return (
@@ -20,8 +20,8 @@ const Stories = () => {
               <h2 > {title}</h2>
               <p > By <span> {author}</span> | <span> {num_comments}</span> comments </p>
               <div className="d-flex justify-content-between">
-                <a href={url} target="_blank" className="btn btn-outline-primary btn-sm ">Read More</a>
-                <a href="#" onClick={() => removeItem(objectID)} className="btn btn-outline-danger btn-sm ">Remove</a>
+                <a href={url} className="btn btn-outline-primary btn-sm ">Read More</a>
+                <button onClick={() => removeItem(objectID)} className="btn btn-outline-danger btn-sm ">Remove</button>
               </div>
             </div>
           </div>
